@@ -22,11 +22,7 @@ export const note = `
       execute o seguinte comando:
     </p>
 
-    <pre class="w-0 min-w-full shadow-sm">
-      <code>
-        npx create-vite@latest nome-do-projeto --template react
-      </code>
-    </pre>
+    <pre class="w-0 min-w-full shadow-sm"><code class="language-bash">npx create-vite@latest nome-do-projeto --template react</code></pre>
 
     <p>
       Substitua "nome-do-projeto" pelo nome que você deseja dar ao seu
@@ -40,18 +36,14 @@ export const note = `
       o seguinte comando para instalar o Tailwind CSS:
     </p>
 
-    <pre class="w-0 min-w-full shadow-sm">
-      <code>npm install tailwindcss</code>
-    </pre>
+    <pre class="w-0 min-w-full shadow-sm"><code class="language-bash">npm install tailwindcss</code></pre>
 
     <p>
       Em seguida, gere o arquivo de configuração do Tailwind CSS
       executando o seguinte comando:
     </p>
 
-    <pre class="w-0 min-w-full shadow-sm">
-      <code>npx tailwindcss init</code>
-    </pre>
+    <pre class="w-0 min-w-full shadow-sm"><code class="language-bash">npx tailwindcss init</code></pre>
 
     <p>
       Isso criará o arquivo "tailwind.config.js" na raiz do seu
@@ -65,12 +57,9 @@ export const note = `
       conteúdo por:
     </p>
 
-    <pre class="w-0 min-w-full shadow-sm">
-      <code>
-        @import 'tailwindcss/base'; @import 'tailwindcss/components';
-        @import 'tailwindcss/utilities';
-      </code>
-    </pre>
+    <pre class="w-0 min-w-full shadow-sm"><code class="language-css">@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';</code></pre>
 
     <p>
       Agora, o Tailwind CSS está configurado e pronto para ser usado
@@ -83,9 +72,7 @@ export const note = `
       comando:
     </p>
 
-    <pre class="w-0 min-w-full shadow-sm">
-      <code>npm run dev</code>
-    </pre>
+    <pre class="w-0 min-w-full shadow-sm"><code class="language-bash">npm run dev</code></pre>
 
     <p>
       Isso iniciará o servidor de desenvolvimento do Vite e seu
