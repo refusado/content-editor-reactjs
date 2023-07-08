@@ -1,4 +1,4 @@
-import note from "./note";
+import notes from "../data/notes";
 import { useEditor, EditorContent, BubbleMenu } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
@@ -12,8 +12,12 @@ import {
   RxChevronDown,
   RxChatBubble,
 } from "react-icons/rx";
+import BubbleMenuButton from "./BubbleMenuButton";
 
-export default function Editor() {
+// eslint-disable-next-line react/prop-types
+export default function Editor({ noteId }) {
+  const note = notes.find(note => note.id == noteId).content;
+
   const editor = useEditor({
     content: note,
     extensions: [
@@ -28,7 +32,7 @@ export default function Editor() {
     editorProps: {
       attributes: {
         class:
-          "p-3 focus:p-4 rounded-md focus:bg-slate-100 focus:cursor-auto duration-75",
+          "p-3 rounded-md focus:bg-slate-100 focus:cursor-auto duration-75",
       },
     },
   });
@@ -44,51 +48,37 @@ export default function Editor() {
         className="flex bg-zinc-50 rounded-md border border-zinc-300 divide-x divide-zinc-300 shadow-lg text-black"
         editor={editor}
       >
-        <button className="hover:bg-black/5 px-3 py-1 flex items-center gap-1.5 font-medium leading-none text-sm">
-          Text
-          <RxChevronDown />
-        </button>
-        <button className="hover:bg-black/5 px-3 py-1 flex items-center gap-1.5 font-medium leading-none text-sm">
-          <RxChatBubble />
-          Comment
-        </button>
+        <BubbleMenuButton>
+          Text <RxChevronDown />
+        </BubbleMenuButton>
+        <BubbleMenuButton>
+          <RxChatBubble /> Comment
+        </BubbleMenuButton>
         <div className="flex items-center divide-x divide-zinc-300">
-          <button
+          <BubbleMenuButton
             onClick={() => { editor.chain().focus().toggleBold().run() }}
-            className={
-              "hover:bg-black/5 px-2 py-1 leading-none " +
-              (editor.isActive('bold') ? 'text-zinc-400' : '')
-            }
+            data-format-active={editor.isActive('bold')}
           >
             <RxFontBold />
-          </button>
-          <button
+          </BubbleMenuButton>
+          <BubbleMenuButton
             onClick={() => { editor.chain().focus().toggleItalic().run() }}
-            className={
-              "hover:bg-black/5 px-2 py-1 leading-none " +
-              (editor.isActive('italic') ? 'text-zinc-400' : '')
-            }
+            data-format-active={editor.isActive('italic')}
           >
             <RxFontItalic />
-          </button>
-          <button
+          </BubbleMenuButton>
+          <BubbleMenuButton
             onClick={() => { editor.chain().focus().toggleStrike().run() }}
-            className={
-              "hover:bg-black/5 px-2 py-1 leading-none " +
-              (editor.isActive('strike') ? 'text-zinc-400' : '')
-            }
+            data-format-active={editor.isActive('strike')}
           >
             <RxStrikethrough />
-          </button>
-          <button
+          </BubbleMenuButton>
+          <BubbleMenuButton
             onClick={() => { editor.chain().focus().toggleCode().run() }}
-            className={
-              "hover:bg-black/5 px-2 py-1 leading-none " +
-              (editor.isActive('code') ? 'text-zinc-400' : '')
-            }
+            data-format-active={editor.isActive('code')}
           >
             <RxCode />
-          </button>
+          </BubbleMenuButton>
         </div>
       </BubbleMenu>
       }
