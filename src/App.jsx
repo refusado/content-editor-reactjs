@@ -22,8 +22,7 @@ export default function App() {
       'bg-gradient-to-br from-violet-500 to-orange-300',
       'bg-gradient-to-br from-sky-400 to-indigo-900'
     ]
-    const max = gradients.length - 1;
-    const randomIndex = Math.floor(Math.random() * (max - 0 + 1) + 0);
+    const randomIndex = Math.floor(Math.random() * gradients.length);
 
     return gradients[randomIndex];
   }
