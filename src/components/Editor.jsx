@@ -1,4 +1,4 @@
-import notes from "../data/notes";
+import notes from "../data/notes-content";
 import { useEditor, EditorContent, BubbleMenu, FloatingMenu } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
@@ -91,7 +91,7 @@ export default function Editor({ noteId }) {
               className="flex py-2 px-5 items-center gap-3 hover:bg-zinc-100"
               onClick={() => editor.chain().focus().toggleList().run()}
             >
-              <RxCode className="w-8 h-8 bg-white border border-zinc-200 rounded-sm shadow-sm"/>
+              <RxChevronDown className="w-8 h-8 bg-white border border-zinc-200 rounded-sm shadow-sm"/>
               <div className="text-left">
                 <p className="font-black text-sm">Lista</p>
                 <p className="opacity-60 text-xs">Comece uma nova lista</p>
