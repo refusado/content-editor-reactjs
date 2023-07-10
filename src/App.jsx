@@ -23,7 +23,11 @@ function getRandomGradient() {
   return gradients[randomIndex];
 }
 
-const currentNote = 1;
+const url = window.location.pathname;
+const params = url.split('/');
+const lastParam = params[params.length - 1];
+
+const currentNote = lastParam;
 
 export default function App() {
   const [bgGradient, setBgGradient] = useState(getRandomGradient);
@@ -33,7 +37,7 @@ export default function App() {
     <div className={"h-screen text-zinc-900 flex justify-center items-center " + bgGradient}>
       <div
         className="@container flex bg-white w-11/12 max-w-screen-2xl h-5/6 max-h-screen mx-auto rounded-xl border border-black/20 shadow-md overflow-hidden resize">
-        <Menu onClickEvent={() => setBgGradient(getRandomGradient())} activeNote={currentNote} />
+        <Menu onClickEvent={() => setBgGradient(getRandomGradient())} activeNote={currentNote}/>
         <div className="flex overflow-y-auto overflow-x-hidden h-full grow">
           <main className="flex-1">
             <Editor noteId={currentNote}></Editor>

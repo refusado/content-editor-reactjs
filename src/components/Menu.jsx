@@ -1,16 +1,20 @@
 const notesResponse = await fetch('./src/data/mock-notes.json');
 const notesData = await notesResponse.json();
-const titles = notesData.map(note => note.title);
 
 // eslint-disable-next-line react/prop-types
 export default function Menu({ onClickEvent, activeNote }) {
-  const notesListItems = titles.map((name, index) => {
+  const notesListItems = notesData.map(note => {
     const highlightStyles = 'text-zinc-800';
     const defaultStyles = 'hover:underline cursor-pointer';
   
     return (
-      <li key={index} className={index == activeNote ? highlightStyles : defaultStyles}>
-        <a className={index == activeNote ? "cursor-default" : "cursor-pointer" } href="#">{name}</a>
+      <li
+        key={note.id}
+        className={note.id == activeNote ? highlightStyles : defaultStyles}
+      >
+        <a className={note.id == activeNote ? "cursor-default" : "cursor-pointer" } href={`/${note.id}`} >
+          {note.title}
+        </a>
       </li>
     )
   });
