@@ -32,7 +32,7 @@ export default function Editor({ noteId }) {
     editorProps: {
       attributes: {
         class:
-          "p-3 rounded-md focus:bg-slate-100 focus:cursor-auto duration-75",
+          "mx-3 @lg/editor:mx-4 @4xl/editor:mx-6 my-6 @lg/editor:my-10 @2xl/editor:my-16 rounded-md focus:bg-slate-200 focus:cursor-auto focus:p-2 focus:outline-1 duration-100 delay-150 outline-0 cursor-pointer",
       },
     },
   });
@@ -40,7 +40,7 @@ export default function Editor({ noteId }) {
   return (
     <>
       <EditorContent
-        className="prose w-full max-w-3xl min-w-none mx-auto my-16 cursor-pointer"
+        className="prose w-full max-w-3xl mx-auto @container/editor"
         editor={editor}
         spellCheck="false"
       />

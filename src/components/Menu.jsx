@@ -16,7 +16,7 @@ export default function Menu({ onClickEvent, activeNote }) {
   });
 
   return (
-    <aside className="w-60 lg:w-80 h-full bg-zinc-100 border border-black/10 border-r-zinc-200 rounded-l-xl overflow-y-auto resize-x">
+    <aside className="w-80 hidden @4xl:block h-full bg-zinc-100 border border-black/10 border-r-zinc-200 rounded-l-xl overflow-x-hidden overflow-y-auto resize-x">
       <div className="p-4 bg-zinc-100 flex gap-2 group w-full sticky top-0 z-30" onClick={onClickEvent}>
         <button className="w-4 h-4 rounded-full bg-zinc-300 group-hover:bg-red-400" />
         <button className="w-4 h-4 rounded-full bg-zinc-300 group-hover:bg-yellow-400" />

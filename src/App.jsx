@@ -32,10 +32,10 @@ export default function App() {
   return (
     <div className={"h-screen text-zinc-900 flex justify-center items-center " + bgGradient}>
       <div
-        className="flex bg-white w-11/12 max-w-screen-2xl h-5/6 max-h-screen mx-auto rounded-xl border border-black/20 shadow-md overflow-hidden resize">
+        className="@container flex bg-white w-11/12 max-w-screen-2xl h-5/6 max-h-screen mx-auto rounded-xl border border-black/20 shadow-md overflow-hidden resize">
         <Menu onClickEvent={() => setBgGradient(getRandomGradient())} activeNote={currentNote} />
         <div className="flex overflow-y-auto overflow-x-hidden h-full grow">
-          <main className="p-4 flex-1">
+          <main className="flex-1">
             <Editor noteId={currentNote}></Editor>
           </main>
         </div>

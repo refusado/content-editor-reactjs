@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
     "@tiptap/extension-bubble-menu": "^2.0.3",
     "@tiptap/extension-code-block-lowlight": "^2.0.3",
     "@tiptap/extension-floating-menu": "^2.0.3",
