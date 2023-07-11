@@ -1,8 +1,19 @@
-const notesResponse = await fetch('./src/data/mock-notes.json');
-const notesData = await notesResponse.json();
+import { useEffect, useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 export default function Menu({ onClickEvent, activeNote }) {
+  const [notesData, setNotesData] = useState([]);
+
+  useEffect(() => {
+    async function fetchNotesData() {
+      const notesResponse = await fetch('/mock-notes.json');
+      const notesData = await notesResponse.json();
+      setNotesData(notesData);
+    }
+
+    fetchNotesData();
+  }, []);
+
   const notesListItems = notesData.map(note => {
     const highlightStyles = 'text-zinc-800';
     const defaultStyles = 'hover:underline cursor-pointer';
