@@ -1,0 +1,50 @@
+[
+  {
+    "id": 0,
+    "title": "Introdução ao Next.js: Construindo um aplicativo React server-side renderizado"
+  },
+  {
+    "id": 1,
+    "title": "Iniciando um projeto React com Vite e adicionando Tailwind CSS"
+  },
+  {
+    "id": 2,
+    "title": "Adicionando animações e transições suaves em um projeto React com Framer Motion"
+  },
+  {
+    "id": 3,
+    "title": "Integração de mapas interativos em um aplicativo React com Mapbox"
+  },
+  {
+    "id": 4,
+    "title": "Otimizando o desempenho de um aplicativo React com Lazy Loading e Code Splitting"
+  },
+  {
+    "id": 5,
+    "title": "Construindo um aplicativo de chat em tempo real com React e Socket.io"
+  },
+  {
+    "id": 6,
+    "title": "Implementando um sistema de busca em um aplicativo React utilizando a biblioteca Algolia"
+  },
+  {
+    "id": 7,
+    "title": "Introdução ao Redux: Gerenciando o estado global de um aplicativo React"
+  },
+  {
+    "id": 8,
+    "title": "Construindo uma aplicação de previsão do tempo com React e uma API de clima"
+  },
+  {
+    "id": 9,
+    "title": "Adicionando suporte a internacionalização em um projeto React com a biblioteca react-intl"
+  },
+  {
+    "id": 10,
+    "title": "Implementando um recurso de arrastar e soltar (drag and drop) em um aplicativo React com React DnD"
+  },
+  {
+    "id": 11,
+    "title": "Integração de autenticação social (Google, Facebook, etc.) em um aplicativo React com Firebase"
+  }
+]
